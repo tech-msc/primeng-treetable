@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataJsonService } from './home/home.service';
+import { TreeTableModule } from 'primeng/treetable';
+import { TreeTable } from 'primeng/treetable';
 
 
 @NgModule({
@@ -16,8 +18,8 @@ import { DataJsonService } from './home/home.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-
+    HttpClientModule,
+    TreeTableModule,
 
   ],
   providers: [DataJsonService],
