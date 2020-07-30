@@ -18,14 +18,14 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.buscarDados();
 
-    setTimeout(() => {
-      console.log('timeout');
-      console.log(this.res);
+    // setTimeout(() => {
+    //   console.log('timeout');
+    //   console.log(this.res);
       
-    }, 1000);
+    // }, 1000);
   }
 
-  res : TreeNode ;
+  res : TreeNode[] ;
 
   buscarDados(){
     
