@@ -1,4 +1,4 @@
-# TreeTest
+# TreeTable Test
 Project designed to test the use of the 'treetable' component.
 
 
