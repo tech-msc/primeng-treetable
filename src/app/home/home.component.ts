@@ -33,9 +33,6 @@ export class HomeComponent implements OnInit {
       .subscribe( x=> this.res = x );
 
 
-      // this.dts.getFilesystem()
-      // .subscribe( x=>  {this.res = x; console.log(this.res) });
-
   }
 
 }
