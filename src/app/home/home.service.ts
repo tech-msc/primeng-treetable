@@ -13,26 +13,14 @@ export class DataJsonService {
 
     getFilesystem() : Observable<any> {
         const URL = 'http://localhost:3000/data'
-        
-        // return this.http
-        //     .get(URL, { responseType: 'json' as const})
-        //     .pipe(map( res => { 
-        //                  return res
-        //     }));
-
-     
 
             return this.http
-            .get(URL, { responseType: 'json' as const})
-            .pipe(map( res => { 
-                         return res;
-                         
-            }));
+                .get(URL, { responseType: 'json' as const})
+                .pipe(map( res => { 
+                            return res;
+                            
+                }));
 
-
-
-            // .toPromise()
-            // .then(res => <TreeNode[]> res.json().data);
     }
     
 }
