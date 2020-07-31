@@ -1,48 +1,47 @@
 {
-    "data":
-    [
+    "data": [
         {
-            "data":{
-                "name":"Documents",
-                "size":"75kb",
-                "type":"Folder"
+            "data": {
+                "name": "Documents",
+                "size": "75kb",
+                "type": "Folder"
             },
-            "children":[
+            "children": [
                 {
-                    "data":{
-                        "name":"Work",
-                        "size":"55kb",
-                        "type":"Folder"
+                    "data": {
+                        "name": "Work",
+                        "size": "55kb",
+                        "type": "Folder"
                     },
-                    "children":[
+                    "children": [
                         {
-                            "data":{
-                                "name":"Expenses.doc",
-                                "size":"30kb",
-                                "type":"Document"
+                            "data": {
+                                "name": "Expenses.doc",
+                                "size": "30kb",
+                                "type": "Document"
                             }
                         },
                         {
-                            "data":{
-                                "name":"Resume.doc",
-                                "size":"25kb",
-                                "type":"Resume"
+                            "data": {
+                                "name": "Resume.doc",
+                                "size": "25kb",
+                                "type": "Resume"
                             }
                         }
                     ]
                 },
                 {
-                    "data":{
-                        "name":"Home",
-                        "size":"20kb",
-                        "type":"Folder"
+                    "data": {
+                        "name": "Home",
+                        "size": "20kb",
+                        "type": "Folder"
                     },
-                    "children":[
+                    "children": [
                         {
-                            "data":{
-                                "name":"Invoices",
-                                "size":"20kb",
-                                "type":"Text"
+                            "data": {
+                                "name": "Invoices",
+                                "size": "20kb",
+                                "type": "Text"
                             }
                         }
                     ]
@@ -50,34 +49,231 @@
             ]
         },
         {
-            "data":{
-                "name":"Pictures",
-                "size":"150kb",
-                "type":"Folder"
+            "data": {
+                "name": "Pictures",
+                "size": "150kb",
+                "type": "Folder"
             },
-            "children":[
+            "children": [
                 {
-                    "data":{
-                        "name":"barcelona.jpg",
-                        "size":"90kb",
-                        "type":"Picture"
+                    "data": {
+                        "name": "barcelona.jpg",
+                        "size": "90kb",
+                        "type": "Picture"
                     }
                 },
                 {
-                    "data":{
-                        "name":"primeui.png",
-                        "size":"30kb",
-                        "type":"Picture"
+                    "data": {
+                        "name": "primeui.png",
+                        "size": "30kb",
+                        "type": "Picture"
                     }
                 },
                 {
-                    "data":{
-                        "name":"optimus.jpg",
-                        "size":"30kb",
-                        "type":"Picture"
+                    "data": {
+                        "name": "optimus.jpg",
+                        "size": "30kb",
+                        "type": "Picture"
                     }
                 }
             ]
         }
+    ],
+    "data2": [
+        {
+            "data": {
+                "name": "Saude 40 anos"
+            }
+        },
+        {
+            "data": {
+                "name": "Saude Depois do 60"
+            }
+        }
+    ],
+    "data3": [
+        {
+            "data": {
+                "id": 123,
+                "nomePacote": "Pacote 1"
+            },
+            "children": [
+                {
+                    "data": {
+                        "id": 456,
+                        "nomePacote": "Item Pacote 1"
+                    }
+                },
+                {
+                    "data": {
+                        "id": 456,
+                        "nomePacote": "Item Pacote 2"
+                    }
+                }
+            ]
+        },
+        {
+            "data": {
+                "id": 12345,
+                "nomePacote": "Pacote 2"
+            },
+            "children": [
+                {
+                    "data": {
+                        "id": 45678,
+                        "nomePacote": "Item Pacote 3"
+                    }
+                }
+            ]
+        }
+    ],
+    "pacotes": [
+        {
+            "listaItensAgendamento": [
+                {
+                    "listaEstabelecimentos": [
+                        {
+                            "id": 99,
+                            "nome": "ronaldo clinica"
+                        }
+                    ],
+                    "id": 10,
+                    "nome": "exame de glicemia",
+                    "codigo_vigente": 10012,
+                    "quantidade": 23,
+                    "alias": "exame de glicemia  10012"
+                },
+                {
+                    "listaEstabelecimentos": [],
+                    "id": 333,
+                    "nome": "exame de glicemia",
+                    "codigo_vigente": 10012,
+                    "quantidade": 23,
+                    "alias": "exame de glicemia  10012"
+                }
+            ],
+            "id": 1,
+            "nome": "pacote saude depois 60",
+            "validadeDias": 50,
+            "statusPacote": 1
+        },
+        {
+            "listaItensAgendamento": [
+                {
+                    "listaEstabelecimentos": [],
+                    "id": 10,
+                    "nome": "exame de glicemia",
+                    "codigo_vigente": 10012,
+                    "quantidade": 23,
+                    "alias": "exame de glicemia  10012"
+                },
+                {
+                    "listaEstabelecimentos": [
+                        {
+                            "id": 123,
+                            "nome": "Hospital Otleto"
+                        },
+                        {
+                            "id": 8,
+                            "nome": "Clinica Licdewfun"
+                        },
+                        {
+                            "id": 9,
+                            "nome": "Clinica Kokauh"
+                        }
+                    ],
+                    "id": 12,
+                    "nome": "exame de sangue",
+                    "codigo_vigente": 20012,
+                    "quantidade": 45,
+                    "alias": "exame de sangue  20012"
+                }
+            ],
+            "id": 2,
+            "nome": "pacote saude depois 70",
+            "validadeDias": 150,
+            "statusPacote": 1
+        }
     ]
+
+    ,
+
+    
+        "data4":
+        [
+            {
+                "data":{
+                    "name":"Documents"                    
+                },
+                "children":[
+                    {
+                        "data":{
+                            "name":"Work"
+                            
+                        },
+                        "children":[
+                            {
+                                "data":{
+                                    "name":"Expenses.doc"
+                                
+                                }
+                            },
+                            {
+                                "data":{
+                                    "name":"Resume.doc",
+                                    "size":"25kb",
+                                    "type":"Resume"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "data":{
+                            "name":"Home",                         
+                            "type":"Folder"
+                        },
+                        "children":[
+                            {
+                                "data":{
+                                    
+                                    "size":"20kb"
+                                    
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data":{
+                    "name":"Pictures",
+                    "size":"150kb",
+                    "type":"Folder"
+                },
+                "children":[
+                    {
+                        "data":{
+                            "name":"barcelona.jpg",
+                            "size":"90kb",
+                            "type":"Picture"
+                        }
+                    },
+                    {
+                        "data":{
+                            "name":"primeui.png",
+                            "size":"30kb",
+                            "type":"Picture"
+                        }
+                    },
+                    {
+                        "data":{
+                            "name":"optimus.jpg",
+                            "size":"30kb",
+                            "type":"Picture"
+                        }
+                    }
+                ]
+            }
+        ]
+    
 }

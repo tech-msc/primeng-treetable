@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataJsonService } from './home/home.service';
 import { TreeTableModule } from 'primeng/treetable';
 import { TreeTable } from 'primeng/treetable';
+import { TableprimeComponent } from './tableprime/tableprime.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    TableprimeComponent
   ],
   imports: [
     BrowserModule,

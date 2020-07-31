@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {TreeTableModule} from 'primeng/treetable';
 import { TreeNode } from 'primeng/api'
 import { DataJsonService } from './home.service';
-import { timer } from 'rxjs';
-import { timeInterval } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -12,32 +10,28 @@ import { timeInterval } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
 
+  varHome$: Observable<TreeNode[]>;
 
-  constructor( private dts: DataJsonService) { }
+  resPacotes$ : Observable<TreeNode[]>;
+
+  constructor(private dts: DataJsonService) { }
+
 
   ngOnInit(): void {
-    this.buscarDados();
-
-    setTimeout(() => {
-      console.log('timeout');
-      console.log(this.res);
-      
-    }, 1000);
+    this.buscarDados()
   }
 
-  res : TreeNode[] ;
+  buscarDados() {
 
-  buscarDados(){
+    this.varHome$ = this.dts.getFilesystem()
+
+
+    // this.resPacotes$ = this.dts.getPacoteJson()
     
-  this.dts.getFilesystem()
-      .subscribe( x=> this.res = x );
-
-
-      // this.dts.getFilesystem()
-      // .subscribe( x=>  {this.res = x; console.log(this.res) });
+    
+    this.resPacotes$ = this.dts.getFilesystem3()
 
   }
-
 }
 
 
