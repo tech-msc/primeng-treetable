@@ -22,5 +22,27 @@ export class DataJsonService {
                 }));
 
     }
+
+    getFilesystem3() : Observable<any> {
+        const URL = 'http://localhost:3000/data4'
+
+            return this.http
+                .get(URL, { responseType: 'json' as const})
+                .pipe(map( res => { 
+                            // return JSON.stringify(res);
+                            return res;
+                            
+                }));
+
+    }
+
+    getPacoteJson(): Observable<any> {
+        const URL = 'http://localhost:3000/pacotes'
+
+        return this.http.get(URL, {responseType: 'json' as const})
+                .pipe(map( res  => {
+                    return res;
+                }))
+    }
     
 }
