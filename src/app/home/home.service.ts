@@ -16,9 +16,9 @@ export class DataJsonService {
 
             return this.http
                 .get(URL, { responseType: 'json' as const})
-                .pipe(map( res => { 
+                .pipe(map( res => {
                             return res;
-                            
+
                 }));
 
     }
@@ -28,21 +28,56 @@ export class DataJsonService {
 
             return this.http
                 .get(URL, { responseType: 'json' as const})
-                .pipe(map( res => { 
+                .pipe(map( res => {
                             // return JSON.stringify(res);
                             return res;
-                            
+
                 }));
 
     }
 
-    getPacoteJson(): Observable<any> {
-        const URL = 'http://localhost:3000/pacotes'
+    getPacoteJson(): Promise<any> {
+        const URL = 'http://localhost:3000/data3'
 
-        return this.http.get(URL, {responseType: 'json' as const})
-                .pipe(map( res  => {
-                    return res;
-                }))
+        return this.http.get(URL).toPromise();
+
     }
-    
+
+    async initNodeFromApi(responseFromApi){
+      let customNode: Array<TreeNode> = [];
+
+      //let res = await this.getPacoteJson();
+
+      responseFromApi.map(pacote => {
+        console.log(pacote);
+        console.log(pacote.data.id);
+        console.log(pacote.data.nomePacote);
+
+        let children: TreeNode[] = [
+          {
+            data: {
+              name: pacote.data.id,
+              type: pacote.data.nomePacote
+            },
+            children: []
+          }
+        ];
+
+
+        customNode.push(
+          {
+            data: {
+              name: pacote.data.id,
+              type: pacote.data.nomePacote
+            },
+            children: children
+          }
+        );
+
+      });
+      return customNode;
+    }
+
+
+
 }
