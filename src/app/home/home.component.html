@@ -1,8 +1,28 @@
 <h1>PrimeNG Test</h1>
 <hr>
 <div>
-     <app-tableprime 
-     [listaDados]="varHome$"
-     [listaDados2]="resPacotes$"     
-     ></app-tableprime>
+  <!-- <app-tableprime [listaDados]="varHome$" [pacotes]="resPacotes$"></app-tableprime> -->
+  <p-treeTable [value]="customNode"  *ngIf="customNode">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Nome</th>
+        <th>Id</th>
+        <!-- <th>Tipo</th> -->
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+      <tr>
+        <td>
+          <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+          {{rowData.name}}
+        </td>
+        <td>{{rowData.type}}</td>
+        <!-- <td>{{rowData.tam}}</td> -->
+      </tr>
+    </ng-template>
+  </p-treeTable>
 </div>
+
+<button (click)="addTable()">Add</button>
+
+<app-tableprime [pacotes]="teste"></app-tableprime>
