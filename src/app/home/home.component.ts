@@ -1,7 +1,8 @@
-import { Component, OnInit, AfterContentInit } from '@angular/core';
-import { TreeNode } from 'primeng/api'
-import { DataJsonService } from './home.service';
-import { Observable } from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import {TreeNode} from 'primeng/api';
+import {DataJsonService} from './home.service';
+import {Observable} from 'rxjs';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -9,31 +10,41 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
+  constructor(
+    private dts: DataJsonService,
+    private formBuilder: FormBuilder) {
+
+  }
+
   varHome$: Observable<TreeNode[]>;
-  resPacotes: Array<any>;
+  resPacotes: Array<any> = [];
   customNode: TreeNode[] = [];
   teste: TreeNode[] = [];
 
 
+  pacotesLista: Array<TreeNode> = [];
 
+  formPacote: FormGroup;
 
+  tstpact: any;
+  pctlistanos: any;
+  listanos: TreeNode[] = [];
 
-
-  pacotesLista: Array<TreeNode> = []
-
-  constructor(private dts: DataJsonService) {
-
+  OnInit() {
+    this.initForm();
   }
 
 
-  async ngOnInit()  {
-    await this.buscarDados()
+  async ngOnInit() {
+    await this.buscarDados();
+    this.initNodePacote();
+
   }
 
   initNode() {
-   
 
-    let children: TreeNode[] = [
+
+    const children: TreeNode[] = [
       {
         data: {
           name: 123,
@@ -50,26 +61,48 @@ export class HomeComponent implements OnInit {
           name: 123,
           type: 'pacote.data.nomePacote'
         },
-        children: children
+        children
       }
     );
 
   }
 
+  initNodePacote() {
 
-  tstpact: any;
-  async buscarDados() {   
+    this.tstpact
+      .subscribe(arg => {
+        this.pctlistanos = arg as TreeNode[];
+        console.log('arg');
+        console.log(arg);
 
-    let teste = await this.dts.getPacoteJson();
+      });
+
+  }
+
+  initForm() {
+    this.formPacote = this.formBuilder.group
+    (
+      {
+        pacoteNome: ['', Validators.required],
+        itemNome: ['', Validators.required],
+        estabelecimentoNome: ['', Validators.required]
+      }
+    );
+
+
+  }
+
+
+  async buscarDados() {
+
+    const teste = await this.dts.getPacoteJson();
     console.log(teste);
 
     this.customNode = await this.dts.initNodeFromApi(teste);
 
 
-   this.tstpact = this.dts.getListaDePacotes()
-      // .subscribe( x => this.tstpact = any )
-
-
+    this.tstpact = this.dts.getListaDePacotes();
+    // .subscribe( x => this.tstpact = any )
 
   }
 

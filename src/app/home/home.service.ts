@@ -1,21 +1,22 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
-import { TreeNode } from 'primeng/api';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import {TreeNode} from 'primeng/api';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 
 // @Injectable({providedIn: 'root'})
 @Injectable()
 export class DataJsonService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   getFilesystem(): Observable<any> {
-    const URL = 'http://localhost:3000/data'
+    const URL = 'http://localhost:3000/data';
 
     return this.http
-      .get(URL, { responseType: 'json' as const })
+      .get(URL, {responseType: 'json' as const})
       .pipe(map(res => {
         return res;
 
@@ -24,10 +25,10 @@ export class DataJsonService {
   }
 
   getFilesystem3(): Observable<any> {
-    const URL = 'http://localhost:3000/data4'
+    const URL = 'http://localhost:3000/data4';
 
     return this.http
-      .get(URL, { responseType: 'json' as const })
+      .get(URL, {responseType: 'json' as const})
       .pipe(map(res => {
         // return JSON.stringify(res);
         return res;
@@ -36,7 +37,7 @@ export class DataJsonService {
   }
 
   getPacoteJson(): Promise<any> {
-    const URL = 'http://localhost:3000/data3'
+    const URL = 'http://localhost:3000/data3';
 
     return this.http.get(URL).toPromise();
 
@@ -44,16 +45,16 @@ export class DataJsonService {
 
 
   getListaDePacotes(): Observable<any> {
-    const URL = 'http://localhost:3000/pacotes'
+    const URL = 'http://localhost:3000/pacotes';
 
-    return this.http.get(URL, { responseType: 'json' })
+    return this.http.get(URL, {responseType: 'json'});
 
   }
 
   async initNodeFromApi(responseFromApi) {
 
     console.log('%c-------initNodeFromApi ------', 'background: green; color: white; display:block; font-weight: bold');
-    console.log()
+    console.log();
 
     let customNode: Array<TreeNode> = [];
 
@@ -61,7 +62,7 @@ export class DataJsonService {
       console.log('---------------------------');
 
       console.log('%cindex:' + `%c${index}`,
-        'background: #ff82af; color: white; display:block; font-weight: bold', 'font-weight: bold; margin-left:1%')
+        'background: #ff82af; color: white; display:block; font-weight: bold', 'font-weight: bold; margin-left:1%');
       console.log(pacote);
       console.log('pacote.data.id: ' + pacote.data.id);
       console.log('pacote.data.nomePacote: ' + pacote.data.nomePacote);
@@ -92,7 +93,6 @@ export class DataJsonService {
     });
     return customNode;
   }
-
 
 
 }
