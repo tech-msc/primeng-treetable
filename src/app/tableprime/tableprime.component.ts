@@ -11,12 +11,9 @@ import { timeout } from 'rxjs/operators';
 export class TableprimeComponent implements OnInit {
 
 
-  //@Input()
-  //listaDados: Observable<TreeNode[]>;
-
   @Input()
   pacotes: TreeNode[]
-  // @Output() deucerto: any
+
 
   res: TreeNode[]
   res2: TreeNode[]
