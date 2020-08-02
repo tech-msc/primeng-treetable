@@ -9,7 +9,7 @@ import { DataJsonService } from './home/home.service';
 import { TreeTableModule } from 'primeng/treetable';
 import { TreeTable } from 'primeng/treetable';
 import { TableprimeComponent } from './tableprime/tableprime.component';
-
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import { TableprimeComponent } from './tableprime/tableprime.component';
     AppRoutingModule,
     HttpClientModule,
     TreeTableModule,
+    CardModule
 
   ],
   providers: [DataJsonService],
