@@ -9,74 +9,89 @@ import { map } from 'rxjs/operators';
 // @Injectable({providedIn: 'root'})
 @Injectable()
 export class DataJsonService {
-    constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-    getFilesystem() : Observable<any> {
-        const URL = 'http://localhost:3000/data'
+  getFilesystem(): Observable<any> {
+    const URL = 'http://localhost:3000/data'
 
-            return this.http
-                .get(URL, { responseType: 'json' as const})
-                .pipe(map( res => {
-                            return res;
+    return this.http
+      .get(URL, { responseType: 'json' as const })
+      .pipe(map(res => {
+        return res;
 
-                }));
+      }));
 
-    }
+  }
 
-    getFilesystem3() : Observable<any> {
-        const URL = 'http://localhost:3000/data4'
+  getFilesystem3(): Observable<any> {
+    const URL = 'http://localhost:3000/data4'
 
-            return this.http
-                .get(URL, { responseType: 'json' as const})
-                .pipe(map( res => {
-                            // return JSON.stringify(res);
-                            return res;
+    return this.http
+      .get(URL, { responseType: 'json' as const })
+      .pipe(map(res => {
+        // return JSON.stringify(res);
+        return res;
+      }));
 
-                }));
+  }
 
-    }
+  getPacoteJson(): Promise<any> {
+    const URL = 'http://localhost:3000/data3'
 
-    getPacoteJson(): Promise<any> {
-        const URL = 'http://localhost:3000/data3'
+    return this.http.get(URL).toPromise();
 
-        return this.http.get(URL).toPromise();
-
-    }
-
-    async initNodeFromApi(responseFromApi){
-      let customNode: Array<TreeNode> = [];
-
-      //let res = await this.getPacoteJson();
-
-      responseFromApi.map(pacote => {
-        console.log(pacote);
-        console.log(pacote.data.id);
-        console.log(pacote.data.nomePacote);
-
-        let children: TreeNode[] = [
-          {
-            data: {
-              name: pacote.data.id,
-              type: pacote.data.nomePacote
-            },
-            children: []
-          }
-        ];
+  }
 
 
-        customNode.push(
-          {
-            data: {
-              name: pacote.data.id,
-              type: pacote.data.nomePacote
-            },
-            children: children
-          }
-        );
+  getListaDePacotes(): Observable<any> {
+    const URL = 'http://localhost:3000/pacotes'
 
-      });
-      return customNode;
-    }
+    return this.http.get(URL, { responseType: 'json' })
+
+  }
+
+  async initNodeFromApi(responseFromApi) {
+
+    console.log('%c-------initNodeFromApi ------', 'background: green; color: white; display:block; font-weight: bold');
+    console.log()
+
+    let customNode: Array<TreeNode> = [];
+
+    responseFromApi.map((pacote: any, index: number) => {
+      console.log('---------------------------');
+
+      console.log('%cindex:' + `%c${index}`,
+        'background: #ff82af; color: white; display:block; font-weight: bold', 'font-weight: bold; margin-left:1%')
+      console.log(pacote);
+      console.log('pacote.data.id: ' + pacote.data.id);
+      console.log('pacote.data.nomePacote: ' + pacote.data.nomePacote);
+
+      console.log('---------------------------');
+
+      let children: TreeNode[] = [
+        {
+          data: {
+            name: pacote.data.id,
+            type: pacote.data.nomePacote
+          },
+          children: []
+        }
+      ];
+
+
+      customNode.push(
+        {
+          data: {
+            name: pacote.data.id,
+            type: pacote.data.nomePacote
+          },
+          children: children
+        }
+      );
+
+    });
+    return customNode;
+  }
 
 
 

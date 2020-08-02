@@ -5,17 +5,21 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
 
   varHome$: Observable<TreeNode[]>;
-
   resPacotes: Array<any>;
-
   customNode: TreeNode[] = [];
   teste: TreeNode[] = [];
+
+
+
+
+
+
+  pacotesLista: Array<TreeNode> = []
 
   constructor(private dts: DataJsonService) {
 
@@ -23,45 +27,11 @@ export class HomeComponent implements OnInit {
 
 
   async ngOnInit()  {
-
-    //this.initNode();
-    //this.customNode = await this.dts.initNodeFromApi();
-    //console.log('custom node');
-    //console.log(this.customNode);
-
     await this.buscarDados()
-
-
   }
 
   initNode() {
-    // this.customNode.push(
-    //   {
-    //     data: {
-    //       nome: 'Test',
-    //       tipo: 'Type',
-    //       tam: '5kb'
-    //     },
-    //     children: [
-    //       {
-    //         data: {
-    //           nome: 'Test Child',
-    //           tipo: 'Type Child',
-    //           tam: '5kb Child'
-    //         },
-    //         children: [
-    //           {
-    //             data: {
-    //               nome: "Expenses.doc",
-    //               tipo: "30kb",
-    //               tam: "Document"
-    //             }
-    //           },
-    //         ]
-    //       }
-    //     ]
-    //   }
-    // );
+   
 
     let children: TreeNode[] = [
       {
@@ -87,28 +57,17 @@ export class HomeComponent implements OnInit {
   }
 
 
-
-  async buscarDados() {
-
-    //this.varHome$ = this.dts.getFilesystem()
-
-    // this.dts.getPacoteJson()
-    //   .subscribe(
-    //     res => {
-    //       this.resPacotes = res;
-    //       console.log(this.resPacotes);
-
-    //     },
-    //     err => {
-
-    //     });
-    // this.resPacotes$ = this.dts.getPacoteJson()
-
+  tstpact: any;
+  async buscarDados() {   
 
     let teste = await this.dts.getPacoteJson();
     console.log(teste);
 
     this.customNode = await this.dts.initNodeFromApi(teste);
+
+
+   this.tstpact = this.dts.getListaDePacotes()
+      // .subscribe( x => this.tstpact = any )
 
 
 

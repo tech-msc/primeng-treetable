@@ -1,28 +1,105 @@
-<h1>PrimeNG Test</h1>
-<hr>
-<div>
-  <!-- <app-tableprime [listaDados]="varHome$" [pacotes]="resPacotes$"></app-tableprime> -->
-  <p-treeTable [value]="customNode"  *ngIf="customNode">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Nome</th>
-        <th>Id</th>
-        <!-- <th>Tipo</th> -->
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
-      <tr>
-        <td>
-          <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
-          {{rowData.name}}
-        </td>
-        <td>{{rowData.type}}</td>
-        <!-- <td>{{rowData.tam}}</td> -->
-      </tr>
-    </ng-template>
-  </p-treeTable>
+<h1 style="font-family: sans-serif;">PrimeNG Test</h1>
+
+<hr />
+<div hidden>
+  <div>
+    <!-- <app-tableprime [listaDados]="varHome$" [pacotes]="resPacotes$"></app-tableprime> -->
+    <p-treeTable [value]="customNode" *ngIf="customNode">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Nome</th>
+          <th>Id</th>
+          <!-- <th>Tipo</th> -->
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+        <tr>
+          <td>
+            <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+            {{ rowData.name }}
+          </td>
+          <td>{{ rowData.type }}</td>
+          <!-- <td>{{rowData.tam}}</td> -->
+        </tr>
+      </ng-template>
+    </p-treeTable>
+  </div>
+
+  <button (click)="addTable()">Add</button>
+
+  <h2>TablePrime Component Eduardo</h2>
+  <app-tableprime [pacotes]="teste"></app-tableprime>
 </div>
 
-<button (click)="addTable()">Add</button>
-
+<!-- <h2>TablePrime Teste</h2> -->
 <app-tableprime [pacotes]="teste"></app-tableprime>
+
+<!-- <div class="ui-g" style="display: flex; flex-direction: column;">
+  <div class="p-grid">
+
+  <p-card class="ui-g-2"
+    *ngFor="let item of tstpact | async"
+    [style]="{ width: '360px' }"
+    styleClass="ui-card-shadow"
+    title="{{item.nome}}" subtitle = "id: {{item.id}}" >
+    <div>
+      <p>Id Pacote: {{ item.id }}</p>
+      <p>Nome: {{ item.nome }}</p>
+      <p>Validade Pacote: {{ item.validadeDias }}</p>
+      <p>Status Pacote: {{ item.statusPacote }}</p>
+    </div>
+  </p-card>
+</div> -->
+
+<div class="ui-g"
+[style]="{ background: '#f4edff' , padding: '1em',margin: '1em 0em 1em 0em' }"
+>
+  <div class="ui-g-12 ui-md-6 ui-lg-3" [style]="{ background: '#b2d8ffbb'}">
+    MAHTUS
+  </div>
+  <div class="ui-g-12 ui-md-6 ui-lg-3"
+  [style]="{ background: '#bdcbd9cc' }"
+
+  >
+    da Silva
+  </div>
+</div>
+
+<!-- <div class="p-grid">
+  <p-card
+    class="p-col-4"
+    *ngFor="let item of tstpact | async"
+    [style]="{ width: '360px' }"
+    styleClass="ui-card-shadow"
+    title="{{ item.nome }}"
+    subtitle="id: {{ item.id }}"
+  >
+    <div>
+      <p>Id Pacote: {{ item.id }}</p>
+      <p>Nome: {{ item.nome }}</p>
+      <p>Validade Pacote: {{ item.validadeDias }}</p>
+      <p>Status Pacote: {{ item.statusPacote }}</p>
+    </div>
+  </p-card>
+</div> -->
+
+
+<div class="ui-g"
+[style]="{ background: '#b1ffcfba', padding: '1em',margin: '1em 0em 1em 0em' }"
+>
+  <p-card
+    class="ui-g-4 ui-md-6 ui-lg-3"
+    *ngFor="let item of tstpact | async"
+    [style]="{ width: '360px' }"
+    styleClass="ui-card-shadow"
+    title="{{ item.nome }}"
+    subtitle="id: {{ item.id }}"
+  >
+    <div>
+      <p>Id Pacote: {{ item.id }}</p>
+      <p>Nome: {{ item.nome }}</p>
+      <p>Validade Pacote: {{ item.validadeDias }}</p>
+      <p>Status Pacote: {{ item.statusPacote }}</p>
+    </div>
+  </p-card>
+</div>
