@@ -1,6 +1,6 @@
 <h1 style="font-family: sans-serif;">PrimeNG Test</h1>
 
-<hr />
+<hr/>
 <div hidden>
   <div>
     <!-- <app-tableprime [listaDados]="varHome$" [pacotes]="resPacotes$"></app-tableprime> -->
@@ -25,11 +25,64 @@
     </p-treeTable>
   </div>
 
-  <button (click)="addTable()">Add</button>
+  <p-button
+    type
+    label="Add"
+    icon
+    iconPos
+    disabled
+    style
+    [style]="{ margin: '1em 0 1em 0' }"
+    (click)="addTable()"
+    onFocus
+    onBlur
+  >
+  </p-button>
 
   <h2>TablePrime Component Eduardo</h2>
   <app-tableprime [pacotes]="teste"></app-tableprime>
 </div>
+
+<!-- todo msc  -->
+
+<!-- <app-tableprime [pacotes]="teste"></app-tableprime> -->
+
+
+<div class="ui-g ui-fluid" [formGroup]="this.formPacote">
+  <div class="ui-g-12 ui-md-3">
+    <div class="ui-inputgroup">
+      <input type="text" pInputText placeholder="Pacote"
+      />
+    </div>
+  </div>
+
+  <div class="ui-g-12 ui-md-3">
+    <div class="ui-inputgroup">
+      <input type="text" pInputText placeholder="Item"
+      />
+
+    </div>
+  </div>
+
+  <div class="ui-g-12 ui-md-3">
+    <div class="ui-inputgroup">
+      <input type="text" pInputText placeholder="Estabelecimento"
+      />
+    </div>
+  </div>
+
+  <div class="ui-g-12 ui-md-3">
+    <div class="ui-inputgroup">
+      <p-button label="Add Pacote"
+                (click)="addTable()"
+                onFocus
+                onBlur
+      >
+      </p-button>
+    </div>
+  </div>
+</div>
+
 
 <app-tableprime [pacotes]="teste"></app-tableprime>
 
@@ -46,16 +99,19 @@
 </div>
 
 <div
-  class="ui-g justify-content: space-around;"
-  [style]="{background: '#b1ffcfba',padding: '1em', margin: '1em 0em 1em 0em'}"
+  class="ui-g"
+  [style]="{
+    background: '#b1ffcfba',
+    padding: '1em',
+    margin: '1em 0em 1em 0em',
+    'flex-wrap': 'nowrap'
+  }"
 >
   <p-card
-    class="ui-g-4 ui-md-6 ui-lg-3"
     *ngFor="let item of tstpact | async"
-    [style]="{ width: '360px' }"
+    class="ui-g-12 ui-md-6 ui-lg-4"
     styleClass="ui-card-shadow"
     title="{{ item.nome }}"
-    subtitle="id: {{ item.id }}"
   >
     <div>
       <p>Id Pacote: {{ item.id }}</p>

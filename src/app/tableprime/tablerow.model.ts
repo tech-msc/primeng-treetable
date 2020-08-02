@@ -1,4 +1,4 @@
-import { TreeNode } from 'primeng/api';
+import {TreeNode} from 'primeng/api';
 
 export class PacoteTree {
 

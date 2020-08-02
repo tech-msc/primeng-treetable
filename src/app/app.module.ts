@@ -1,3 +1,4 @@
+import { FormBuilder, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +11,10 @@ import { TreeTableModule } from 'primeng/treetable';
 import { TreeTable } from 'primeng/treetable';
 import { TableprimeComponent } from './tableprime/tableprime.component';
 import {CardModule} from 'primeng/card';
+import {InputTextModule} from 'primeng/inputtext';
+
+import {ButtonModule} from 'primeng/button';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +27,11 @@ import {CardModule} from 'primeng/card';
     AppRoutingModule,
     HttpClientModule,
     TreeTableModule,
-    CardModule
+    CardModule,
+    InputTextModule,
+    ButtonModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [DataJsonService],

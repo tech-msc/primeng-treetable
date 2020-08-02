@@ -1,8 +1,5 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
-import { TreeNode } from 'primeng/api';
-import { Observable } from 'rxjs';
-import { PacoteTree } from './tablerow.model';
-import { timeout } from 'rxjs/operators';
+import {Component, Input, OnInit} from '@angular/core';
+import {TreeNode} from 'primeng/api';
 
 @Component({
   selector: 'app-tableprime',
@@ -12,14 +9,16 @@ export class TableprimeComponent implements OnInit {
 
 
   @Input()
-  pacotes: TreeNode[]
+  pacotes: TreeNode[];
 
 
-  res: TreeNode[]
-  res2: TreeNode[]
+  res: TreeNode[];
+  res2: TreeNode[];
 
-  constructor() { }
-  listaPacotes: TreeNode[]
+  constructor() {
+  }
+
+  listaPacotes: TreeNode[];
 
   ngOnInit(): void {
 
