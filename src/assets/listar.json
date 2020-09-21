@@ -1,0 +1,139 @@
+[
+    {
+      "itemPacoteProcedPK": "63",
+      "itemPacoteProcedID": "133",
+      "itemPacoteProcedNome": "EXAMES EM DOADORES DE SANGUE",
+      "itemPacoteProcedimentoCodigoVigente": "0212010018",
+      "itemPacoteProcedQuantidade": "43123",
+      "pacoteProcedimentoPK": "16",
+      "pacoteProcedimentoItemAgrupadorID": "130",
+      "pacoteProcedimentoItemAgrupadorNome": "PESQUISA DE SANGUE",
+      "pacoteProcedimentoStatus": "0",
+      "pacoteProcedimentoDiasValidade": "99",
+      "itemPacoteProcedEstabelecimentoID": "2485",
+      "itemPacoteProcedEstabelecimentoNome": "UNIDADE D DMB",
+      
+      "pacoteProcedimentoCentralID" : "502",
+      "pacoteProcedimentoCentralName" : "Central Singapore"
+    },
+    {
+      "itemPacoteProcedPK": "62",
+      "itemPacoteProcedID": "134",
+      "itemPacoteProcedNome": "SOROLOGIA EM DOARES DE SANGUE",
+      "itemPacoteProcedimentoCodigoVigente": "0212010050",
+      "itemPacoteProcedQuantidade": "34213",
+      "pacoteProcedimentoPK": "16",
+      "pacoteProcedimentoItemAgrupadorID": "130",
+      "pacoteProcedimentoItemAgrupadorNome": "PESQUISA DE SANGUE",
+      "pacoteProcedimentoStatus": "0",
+      "pacoteProcedimentoDiasValidade": "99",
+      "itemPacoteProcedEstabelecimentoID": "2803",
+      "itemPacoteProcedEstabelecimentoNome": "CENTRAL MASTER",
+      
+      "pacoteProcedimentoCentralID" : "502",
+      "pacoteProcedimentoCentralName" : "Central Singapore"
+    },
+    {
+      "itemPacoteProcedPK": "61",
+      "itemPacoteProcedID": "133",
+      "itemPacoteProcedNome": "EXAMES EM DOADORES DE SANGUE",
+      "itemPacoteProcedimentoCodigoVigente": "0212010018",
+      "itemPacoteProcedQuantidade": "43123",
+      "pacoteProcedimentoPK": "16",
+      "pacoteProcedimentoItemAgrupadorID": "130",
+      "pacoteProcedimentoItemAgrupadorNome": "PESQUISA DE SANGUE",
+      "pacoteProcedimentoStatus": "0",
+      "pacoteProcedimentoDiasValidade": "99",
+      "itemPacoteProcedEstabelecimentoID": "2803",
+      "itemPacoteProcedEstabelecimentoNome": "CENTRAL MASTER",
+      
+      "pacoteProcedimentoCentralID" : "632",
+      "pacoteProcedimentoCentralName" : "Central Belize"
+    },
+    {
+      "itemPacoteProcedPK": "64",
+      "itemPacoteProcedID": "134",
+      "itemPacoteProcedNome": "SOROLOGIA EM DOARES DE SANGUE",
+      "itemPacoteProcedimentoCodigoVigente": "0212010050",
+      "itemPacoteProcedQuantidade": "34213",
+      "pacoteProcedimentoPK": "16",
+      "pacoteProcedimentoItemAgrupadorID": "130",
+      "pacoteProcedimentoItemAgrupadorNome": "PESQUISA DE SANGUE",
+      "pacoteProcedimentoStatus": "0",
+      "pacoteProcedimentoDiasValidade": "99",
+      "itemPacoteProcedEstabelecimentoID": "2485",
+      "itemPacoteProcedEstabelecimentoNome": "UNIDADE D DMB",
+      
+      "pacoteProcedimentoCentralID" : "632",
+      "pacoteProcedimentoCentralName" : "Central Belize"
+    },
+    {
+      "itemPacoteProcedPK": "59",
+      "itemPacoteProcedID": "81",
+      "itemPacoteProcedNome": "ELETROCARDIOGRAMA",
+      "itemPacoteProcedimentoCodigoVigente": "0211020036",
+      "itemPacoteProcedQuantidade": "10",
+      "pacoteProcedimentoPK": "15",
+      "pacoteProcedimentoItemAgrupadorID": "331",
+      "pacoteProcedimentoItemAgrupadorNome": "REG CARDIO DMB",
+      "pacoteProcedimentoStatus": "1",
+      "pacoteProcedimentoDiasValidade": "10",
+      "itemPacoteProcedEstabelecimentoID": "1911",
+      "itemPacoteProcedEstabelecimentoNome": "UNIDADE E DMB",
+      
+      "pacoteProcedimentoCentralID" : "362",
+      "pacoteProcedimentoCentralName" : "Central El Salvador"
+    },
+    {
+      "itemPacoteProcedPK": "58",
+      "itemPacoteProcedID": "103",
+      "itemPacoteProcedNome": "ECODOPPLER TRANSCRANIANO",
+      "itemPacoteProcedimentoCodigoVigente": "0205020011",
+      "itemPacoteProcedQuantidade": "9",
+      "pacoteProcedimentoPK": "15",
+      "pacoteProcedimentoItemAgrupadorID": "331",
+      "pacoteProcedimentoItemAgrupadorNome": "REG CARDIO DMB",
+      "pacoteProcedimentoStatus": "1",
+      "pacoteProcedimentoDiasValidade": "10",
+      "itemPacoteProcedEstabelecimentoID": "2485",
+      "itemPacoteProcedEstabelecimentoNome": "UNIDADE D DMB",
+      
+      "pacoteProcedimentoCentralID" : "362",
+      "pacoteProcedimentoCentralName" : "Central El Salvador"
+    },
+    {
+      "itemPacoteProcedPK": "57",
+      "itemPacoteProcedID": "81",
+      "itemPacoteProcedNome": "ELETROCARDIOGRAMA",
+      "itemPacoteProcedimentoCodigoVigente": "0211020036",
+      "itemPacoteProcedQuantidade": "10",
+      "pacoteProcedimentoPK": "15",
+      "pacoteProcedimentoItemAgrupadorID": "331",
+      "pacoteProcedimentoItemAgrupadorNome": "REG CARDIO DMB",
+      "pacoteProcedimentoStatus": "1",
+      "pacoteProcedimentoDiasValidade": "10",
+      "itemPacoteProcedEstabelecimentoID": "2485",
+      "itemPacoteProcedEstabelecimentoNome": "UNIDADE D DMB",
+      
+      "pacoteProcedimentoCentralID" : "312",
+      "pacoteProcedimentoCentralName" : "Central Côte d'Ivoire"
+    },
+    {
+      "itemPacoteProcedPK": "60",
+      "itemPacoteProcedID": "103",
+      "itemPacoteProcedNome": "ECODOPPLER TRANSCRANIANO",
+      "itemPacoteProcedimentoCodigoVigente": "0205020011",
+      "itemPacoteProcedQuantidade": "9",
+      "pacoteProcedimentoPK": "15",
+      "pacoteProcedimentoItemAgrupadorID": "331",
+      "pacoteProcedimentoItemAgrupadorNome": "REG CARDIO DMB",
+      "pacoteProcedimentoStatus": "1",
+      "pacoteProcedimentoDiasValidade": "10",
+      "itemPacoteProcedEstabelecimentoID": "1911",
+      "itemPacoteProcedEstabelecimentoNome": "UNIDADE E DMB",
+      
+      "pacoteProcedimentoCentralID" : "312",
+      "pacoteProcedimentoCentralName" : "Central Côte d'Ivoire"
+    }
+  ]
+  

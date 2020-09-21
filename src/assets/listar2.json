@@ -1,0 +1,103 @@
+[
+  {
+      "pacotePK": "1",
+      "pacoteItemAgrupadorID": "6",
+      "pacoteItemAgrupadorNome": "CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA",
+      "pacoteStatus": "0",
+      "pacoteDiasValidade": "35",
+      "itensAgendamento": [
+          {
+              "itemPacotePK": "8",
+              "itemPacoteID": "332",
+              "itemPacoteNome": "SEM REG DERMATOLOGIA",
+              "itemPacoteCodigoVigente": "0301010072",
+              "itemPacoteQuantidade": "90",
+              "fk_pacoteProcedimento": "1"
+          }
+      ],
+      "unidadesExecutantes": [
+          {
+              "nome": "0",
+              "id": "0",
+              "fk_pacote": "1"
+          }
+      ]
+  },
+  {
+      "pacotePK": "17",
+      "pacoteItemAgrupadorID": "64",
+      "pacoteItemAgrupadorNome": "CONSULTA EM NEUROLOGIA",
+      "pacoteStatus": "0",
+      "pacoteDiasValidade": "1",
+      "itensAgendamento": [
+          {
+              "itemPacotePK": "66",
+              "itemPacoteID": "7700",
+              "itemPacoteNome": "CONTROLE DE SURTOS REACIONAIS C/ MAPEAMENTO DE SENS.",
+              "itemPacoteCodigoVigente": "0204060060",
+              "itemPacoteQuantidade": "1",
+              "fk_pacoteProcedimento": "17"
+          }
+      ],
+      "unidadesExecutantes": [
+          {
+              "nome": "HOSPITAL DE CONSULTAS COMPLETO",
+              "id": "3293",
+              "fk_pacote": "17"
+          }
+      ]
+  },
+  {
+      "pacotePK": "16",
+      "pacoteItemAgrupadorID": "130",
+      "pacoteItemAgrupadorNome": "PESQUISA DE SANGUE",
+      "pacoteStatus": "0",
+      "pacoteDiasValidade": "99",
+      "itensAgendamento": [
+          {
+              "itemPacotePK": "64",
+              "itemPacoteID": "134",
+              "itemPacoteNome": "SOROLOGIA EM DOARES DE SANGUE",
+              "itemPacoteCodigoVigente": "0212010050",
+              "itemPacoteQuantidade": "34213",
+              "fk_pacoteProcedimento": "16"
+          }
+      ],
+      "unidadesExecutantes": [
+          {
+              "nome": "UNIDADE D DMB",
+              "id": "2485",
+              "fk_pacote": "16"
+          },
+          {
+            "nome": "UNIDADE D uaua",
+            "id": "2485",
+            "fk_pacote": "16"
+          }
+      ]
+  },
+  {
+      "pacotePK": "15",
+      "pacoteItemAgrupadorID": "331",
+      "pacoteItemAgrupadorNome": "REG CARDIO DMB",
+      "pacoteStatus": "1",
+      "pacoteDiasValidade": "10",
+      "itensAgendamento": [
+          {
+              "itemPacotePK": "57",
+              "itemPacoteID": "81",
+              "itemPacoteNome": "ELETROCARDIOGRAMA",
+              "itemPacoteCodigoVigente": "0211020036",
+              "itemPacoteQuantidade": "10",
+              "fk_pacoteProcedimento": "15"
+          }
+      ],
+      "unidadesExecutantes": [
+          {
+              "nome": "UNIDADE D DMB",
+              "id": "2485",
+              "fk_pacote": "15"
+          }
+      ]
+  }
+]
